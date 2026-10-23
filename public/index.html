@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <meta name="description" content="Masterclass Arquitetura do Sucesso™ — descubra onde seu potencial está travado e qual arquitetura precisa começar a construir." />
+  <title>Masterclass Arquitetura do Sucesso™ | (B)eyond Circle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet" />
+  <style>
+    :root { --black:#0b0b0c; --black2:#111113; --paper:#fbfbfa; --red:#d51e3a; --red2:#e83950; --line:#d9d9d6; --muted:#656565; --borderdark:rgba(255,255,255,.17); --serif:'Italiana', 'Bodoni MT', 'Didot', Georgia, serif; --sans:'DM Sans',Arial,Helvetica,sans-serif; }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{margin:0; background:var(--black);color:#fff;font-family:var(--sans);font-size:16px;line-height:1.5; -webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none} button,input{font:inherit}
+    button{cursor:pointer} button:disabled{cursor:wait;opacity:.7}
+    button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--red2);outline-offset:4px}
+    ::selection{background:var(--red);color:#fff}
+    .container{width:min(1232px,calc(100% - 80px));margin:0 auto}
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .25s,border-color .25s;background:rgba(8,8,9,.85);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(17px)}
+    .header-inner{height:79px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .wordmark{display:flex;align-items:center;gap:12px;white-space:nowrap;flex-shrink:0}
+    .wordmark .symbol{font-family:var(--serif);font-size:38px;letter-spacing:-.21em;padding-right:8px;font-style:italic;line-height:1}
+    .wordmark .brandline{font-family:var(--serif);font-size:25px;line-height:.96;letter-spacing:-.035em}
+    .wordmark .brandline b{display:block;margin-top:5px;font-family:var(--sans);text-transform:uppercase;font-size:8px;letter-spacing:.32em;font-weight:700}
+    .nav-links{display:flex;align-items:center;gap:31px;margin-left:auto}
+    .nav-links a{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:#cbcbcb;transition:color .2s}
+    .nav-links a:hover{color:#fff}
+    .nav-cta{border:1px solid rgba(255,255,255,.5);padding:12px 17px;white-space:nowrap;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:700;transition:background .2s,border-color .2s}
+    .nav-cta:hover{background:#fff;color:#111;border-color:#fff}
+    .section-index{display:flex;align-items:center;gap:14px;font-size:11px;text-transform:uppercase;letter-spacing:.22em;font-weight:700;color:#b5b5b5}
+    .section-index:before{content:"";display:block;width:31px;height:2px;background:var(--red)}
+    h1,h2,h3,p{margin:0}
+    h1,h2,.serif{font-family:var(--serif);font-weight:400}
+    /* Lâmina / seção 01 */
+    .hero{position:relative;isolation:isolate;min-height:760px;display:flex;align-items:center;padding:140px 0 85px;overflow:hidden;background:radial-gradient(ellipse at 84% 44%, #262126 0,#111012 42%,#080809 78%)}
+    .hero::before{content:"B";font-family:var(--serif);font-style:italic;position:absolute;z-index:-2;font-size:clamp(500px,72vw,1020px);line-height:1;color:rgba(255,255,255,.018);right:-70px;top:15%;transform:rotate(-12deg);pointer-events:none}
+    .hero::after{content:"";z-index:-1;position:absolute;width:680px;height:680px;right:-245px;top:7%;border-radius:50%;border:1px solid rgba(255,255,255,.08);box-shadow:0 0 0 85px rgba(255,255,255,.012), 0 0 0 172px rgba(255,255,255,.009);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(330px, .77fr);align-items:center;gap:clamp(30px,5vw,92px)}
+    .hero-copy{padding-top:12px}
+    .microcopy{font-size:10px;letter-spacing:.27em;text-transform:uppercase;color:#aeaaac;margin-bottom:25px}
+    .hero h1{font-size:clamp(56px,6.2vw,93px);line-height:1.04;letter-spacing:-.052em;max-width:740px}
+    .hero h1 em{font-weight:400;color:var(--red2);font-style:italic}
+    .hero-lead{max-width:585px;color:#cecbcc;font-size:clamp(14px,1.3vw,17px);line-height:1.85;margin-top:32px;padding-left:19px;border-left:2px solid var(--red)}
+    .hero-quote{margin-top:32px;color:#fff;font-family:var(--serif);font-size:clamp(19px,2.1vw,29px);font-style:italic;line-height:1.3}
+    .hero-tags{display:flex;gap:13px;flex-wrap:wrap;margin-top:37px}
+    .hero-tags span{padding:9px 11px;color:#beb8ba;border:1px solid rgba(255,255,255,.18);font-size:10px;text-transform:uppercase;letter-spacing:.14em}
+    .form-shell{position:relative;background:var(--paper);color:var(--black);padding:38px clamp(24px,3vw,45px) 35px;box-shadow:0 22px 60px rgba(0,0,0,.24)}
+    .form-shell::before{content:"";position:absolute;width:52px;height:4px;background:var(--red);top:0;left:clamp(24px,3vw,45px)}
+    .form-eyebrow{font-size:10px;color:#6f696c;letter-spacing:.24em;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+    .form-shell h2{font-size:clamp(36px,3.3vw,48px);line-height:1.02;letter-spacing:-.025em;max-width:360px}
+    .form-intro{margin-top:13px;color:#666;font-size:12.5px;line-height:1.75;max-width:360px}
+    .form-grid{display:grid;gap:15px;margin-top:24px}
+    .form-grid label:not(.consent){display:block;color:#292929;font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;margin-bottom:7px}
+    .field{width:100%;height:47px;padding:0 13px;border:1px solid #d2d1cf;border-radius:0;background:#fff;color:#111;outline:none;transition:border-color .2s,box-shadow .2s;font-size:14px}
+    .field:focus{border-color:var(--red);box-shadow:0 0 0 2px rgba(213,30,58,.09);outline:none}
+    .field::placeholder{color:#9b9a97}
+    .consent{display:flex;align-items:flex-start;gap:10px;color:#656565;font-size:11px;line-height:1.55;text-transform:none;letter-spacing:0;cursor:pointer;margin-top:3px}
+    .consent input{width:16px;height:16px;accent-color:var(--red);flex:none;margin:2px 0 0}
+    .honeypot{position:absolute !important;left:-9999px !important;opacity:0!important;pointer-events:none!important}
+    .submit{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;border:0;background:var(--red);color:#fff;font-weight:700;font-size:11px;letter-spacing:.13em;text-transform:uppercase;text-align:left;padding:17px 18px;transition:background .2s,transform .2s}
+    .submit:hover{background:#b9142c;transform:translateY(-1px)}
+    .submit .arrow{font-size:22px;line-height:1;font-weight:400}
+    .form-status{font-size:12px;line-height:1.6;margin-top:13px;display:none;padding:10px 12px;border-left:3px solid var(--red);background:#f1eded}
+    .form-status.visible{display:block}
+    .form-status.success{background:#ecf4ee;border-color:#398c5b;color:#183b23}
+    .form-note{font-size:10px;color:#777;line-height:1.5;margin-top:15px}
+    .hero-footer{position:absolute;bottom:22px;left:0;right:0;pointer-events:none}
+    .hero-footer .container{display:flex;align-items:center;justify-content:space-between;gap:30px;color:#858385;font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+    .hero-footer span:last-child{color:#d0caca}
+    /* Lâmina / seção 02 */
+    .diagnosis{background:var(--paper);color:#111;padding:110px 0 108px}
+    .diag-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin:26px 0 54px}
+    .diagnosis h2{font-size:clamp(46px,5.2vw,73px);line-height:1.09;letter-spacing:-.03em;max-width:720px}
+    .diagnosis h2 em{color:var(--red);font-style:italic}
+    .diag-intro p{max-width:440px;margin-left:auto;color:#5c5c5b;font-size:15px;line-height:1.9}
+    .leaks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid #cfcfcd;border-bottom:1px solid #cfcfcd}
+    .leak{min-width:0;min-height:273px;padding:24px 17px 25px;border-right:1px solid #dcdcd9;display:flex;flex-direction:column;gap:16px;transition:background .2s}
+    .leak:first-child{padding-left:0}.leak:last-child{border-right:0;padding-right:0}.leak:hover{background:#f2f2f1}
+    .leak-number{font-family:var(--serif);font-size:43px;line-height:1;color:var(--red)}
+    .leak h3{font-family:var(--serif);font-weight:400;font-size:25px;letter-spacing:-.02em;line-height:1.17;min-height:57px}
+    .leak p{margin-top:auto;color:#656565;font-size:12px;line-height:1.65}
+    .diagnostic-quote{background:#121213;color:#fff;margin-top:48px;padding:38px 44px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+    .diagnostic-quote p{font-family:var(--serif);font-size:clamp(29px,3.2vw,45px);line-height:1.19;max-width:850px}
+    .diagnostic-quote em{color:var(--red2);font-style:italic}
+    .diagnostic-quote small{flex:none;max-width:110px;letter-spacing:.16em;font-weight:600;font-size:9px;line-height:1.75;text-transform:uppercase;color:#b4b4b4}
+    /* Lâmina / seção 03 */
+    .experience{background:radial-gradient(ellipse at 90% 0,#36151e 0%,#111012 40%,#080809 82%);padding:110px 0 0;color:#fff;overflow:hidden}
+    .experience h2{font-size:clamp(47px,5.2vw,77px);line-height:1.07;letter-spacing:-.03em;max-width:940px;margin:27px 0 39px}
+    .experience h2 em{color:var(--red2);font-style:italic}
+    .promise-row{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+    .promise{border-top:1px solid #5a5557;padding-top:19px}
+    .promise .count{font-size:11px;color:#e25569;letter-spacing:.2em;font-weight:700}
+    .promise h3{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.6vw,52px);line-height:1.1;margin:18px 0 10px}
+    .promise p{font-size:14px;line-height:1.75;color:#c5bec0;max-width:330px}
+    .scan{display:grid;grid-template-columns:1.08fr 1fr;gap:60px;align-items:center;margin:74px 0 90px;border:1px solid var(--borderdark);padding:40px 48px;background:rgba(255,255,255,.018)}
+    .scan-label{font-size:10px;letter-spacing:.23em;color:#e56678;text-transform:uppercase;font-weight:700}
+    .scan h3{font-family:var(--serif);font-size:clamp(36px,3.3vw,52px);font-weight:400;line-height:1.16;margin:16px 0}
+    .scan p{color:#c6bec0;font-size:13px;line-height:1.85;max-width:460px}
+    .scan-categories{display:grid;gap:10px}
+    .scan-categories .cat{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:15px 0;border-bottom:1px solid var(--borderdark);font-size:12px}
+    .scan-categories .cat:last-child{border-bottom:none}
+    .scan-categories b{font-weight:500}.scan-categories span{font-size:10px;color:#939092;letter-spacing:.1em;text-transform:uppercase;text-align:right}
+    .last-cta{background:#fff;color:#111;padding:48px 0}
+    .last-cta .container{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .last-cta h3{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.5vw,52px);line-height:1.13;letter-spacing:-.02em;max-width:680px}
+    .last-cta h3 em{color:var(--red);font-style:italic}
+    .last-cta a{flex:none;display:inline-flex;gap:38px;align-items:center;background:var(--red);color:#fff;padding:20px 23px;text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:700;transition:background .2s}
+    .last-cta a:hover{background:#a90e27}
+    footer{background:#0b0b0c;color:#989698;border-top:1px solid var(--borderdark)}
+    footer .container{padding:30px 0;display:flex;gap:20px;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.08em}
+    footer a{text-decoration:underline;text-underline-offset:3px}
+    .reveal{transition:opacity .65s ease,transform .65s ease}
+    .js .reveal:not(.in-view){opacity:1;transform:none}
+    @media(max-width:1150px){.container{width:min(1100px,calc(100% - 60px))}.hero-grid{grid-template-columns:1fr minmax(320px,.86fr);gap:30px}.hero h1{font-size:clamp(54px,5.6vw,77px)}.leak{padding:22px 13px}.leak h3{font-size:22px}.scan{gap:28px}}
+    @media(max-width:850px){.nav-links{display:none}.container{width:calc(100% - 42px)}.header-inner{height:69px}.hero{padding:116px 0 77px}.hero-grid{grid-template-columns:1fr;gap:38px}.hero-copy{padding-top:0}.hero h1{font-size:clamp(52px,9vw,80px);max-width:680px}.hero-lead{margin-top:22px}.hero-quote{margin-top:23px}.hero-tags{margin-top:23px}.form-shell{max-width:620px;width:100%;padding:30px}.hero-footer{display:none}.diag-intro{gap:25px;grid-template-columns:1fr;margin-bottom:35px}.diag-intro p{margin-left:0}.leaks{grid-template-columns:repeat(2,1fr);border-bottom:0}.leak{padding:20px!important;border-bottom:1px solid #dcdcd9;min-height:225px}.leak:nth-child(even){border-right:0}.leak:last-child{grid-column:span 2}.diagnostic-quote{padding:27px}.experience{padding-top:78px}.scan{grid-template-columns:1fr;padding:30px;gap:25px;margin:56px 0}.last-cta .container{align-items:start;flex-direction:column}.last-cta a{width:100%;justify-content:space-between}}
+    @media(max-width:520px){.container{width:calc(100% - 36px)}.wordmark .symbol{font-size:31px}.wordmark .brandline{font-size:21px}.nav-cta{font-size:9px;padding:12px 11px}.hero{padding:103px 0 55px;min-height:unset}.microcopy{font-size:9px;letter-spacing:.18em;margin-bottom:18px}.hero h1{font-size:clamp(49px,12.25vw,66px);line-height:1.01}.hero-lead{font-size:14px;line-height:1.75}.hero-quote{font-size:23px}.hero-tags span{font-size:9px;padding:7px 9px}.form-shell{padding:28px 22px}.form-shell h2{font-size:41px}.diagnosis{padding:74px 0}.diagnosis h2,.experience h2{font-size:clamp(43px,10vw,60px)}.leaks{display:block}.leak{border-right:0;min-height:unset;padding:23px 0 !important;display:grid;grid-template-columns:58px 1fr;gap:9px 16px}.leak h3{font-size:27px;min-height:unset;align-self:center}.leak p{grid-column:2;margin-top:0;max-width:380px}.leak:last-child{grid-column:auto}.diagnostic-quote{display:block;padding:26px 23px}.diagnostic-quote p{font-size:29px}.diagnostic-quote small{display:block;margin-top:19px}.promise-row{display:block}.promise{margin-top:24px}.promise h3{font-size:38px;margin:9px 0}.promise p{font-size:13px}.scan{margin:49px 0;padding:24px 19px}.scan h3{font-size:39px}.scan-categories .cat{display:block}.scan-categories .cat span{display:block;text-align:left;margin-top:5px}.last-cta{padding:37px 0}.last-cta h3{font-size:40px}.last-cta a{padding:19px 17px}footer .container{display:block}footer .container p+p{margin-top:12px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none!important}.js .reveal:not(.in-view){opacity:1;transform:none}.submit,.nav-cta{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="wordmark" aria-label="Beyond Circle — ir ao início">
+        <span class="symbol" aria-hidden="true">(B)</span>
+        <span class="brandline">eyond <b>Circle</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="#diagnostico">O que pode estar travando</a>
+        <a href="#experiencia">A experiência</a>
+      </nav>
+      <a class="nav-cta" href="#inscricao">Quero participar ↗</a>
+    </div>
+  </header>
+  <main>
+    <!-- LÂMINA 1: promessa + captura -->
+    <section class="hero" id="inicio" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="section-index">Masterclass · Arquitetura do Sucesso™</p>
+          <p class="microcopy" style="margin-top:25px">Identidade &nbsp;·&nbsp; Negócio &nbsp;·&nbsp; Autoridade &nbsp;·&nbsp; Vida</p>
+          <h1 id="hero-heading">Você é o seu maior ativo.<br><em>Falta arquitetura.</em></h1>
+          <p class="hero-lead">Descubra como transformar o seu potencial em um negócio autoral com <strong style="color:#fff;font-weight:600">posicionamento, lucro e liberdade</strong> — para construir uma vida de sucesso que também faça sentido para você.</p>
+          <p class="hero-quote">“O negócio é o veículo. A vida é o destino.”</p>
+          <div class="hero-tags" aria-label="Resultados da experiência"><span>Revelação</span><span>Visão</span><span>Direção</span></div>
+        </div>
+        <div class="form-shell reveal" id="inscricao">
+          <p class="form-eyebrow">Dê o primeiro passo</p>
+          <h2>O seu próximo capítulo começa aqui.</h2>
+          <p class="form-intro">Preencha seus dados para solicitar sua participação e receber as informações da Masterclass.</p>
+          <form id="leadForm" novalidate>
+            <div class="form-grid">
+              <div><label for="fullName">Seu nome</label><input class="field" id="fullName" name="nome" type="text" placeholder="Nome completo" autocomplete="name" maxlength="100" required /></div>
+              <div><label for="email">Seu melhor e-mail</label><input class="field" id="email" name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email" maxlength="150" required /></div>
+              <div><label for="phone">Seu WhatsApp</label><input class="field" id="phone" name="whatsapp" type="tel" placeholder="(11) 99999-9999" inputmode="tel" autocomplete="tel-national" maxlength="16" required /></div>
+              <div class="honeypot" aria-hidden="true"><label for="site">Seu site</label><input id="site" name="website" tabindex="-1" autocomplete="off"></div>
+              <label class="consent" for="consent"><input id="consent" name="consentimento" type="checkbox" required><span>Autorizo o contato por e-mail e WhatsApp para receber informações sobre a Masterclass Arquitetura do Sucesso™.</span></label>
+              <button class="submit" id="submitBtn" type="submit"><span>Quero participar da Masterclass</span><span class="arrow" aria-hidden="true">↗</span></button>
+            </div>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <p class="form-note">Seus dados serão utilizados para contato relacionado à Masterclass. Nenhum pagamento é realizado nesta página.</p>
+          </form>
+        </div>
+      </div>
+      <div class="hero-footer" aria-hidden="true"><div class="container"><span>(B)eyond Circle / Self Architecture™</span><span>01 / 03 — Reconhecer</span></div></div>
+    </section>
+    <!-- LÂMINA 2: dores / contraste -->
+    <section class="diagnosis" id="diagnostico" aria-labelledby="diagnostico-heading">
+      <div class="container">
+        <div class="section-index reveal">02 / 03 — Reconheça a distância</div>
+        <div class="diag-intro reveal">
+          <h2 id="diagnostico-heading">Você não está sem potencial.<br><em>Talvez esteja sem arquitetura.</em></h2>
+          <p>Você pode ser excelente, ter experiência, clientes e resultados — e ainda perceber uma distância entre o que construiu e o que seria capaz de viver. A questão não é apenas crescer. É entender o que precisa mudar.</p>
+        </div>
+        <div class="leaks reveal" aria-label="Os cinco vazamentos de potencial">
+          <article class="leak"><span class="leak-number">01</span><h3>O potencial que você não reconhece</h3><p>Talentos, repertório e capacidades valiosas que ainda permanecem invisíveis para você mesma.</p></article>
+          <article class="leak"><span class="leak-number">02</span><h3>O potencial que o mercado não percebe</h3><p>Você entrega muito, mas ainda não está claro por que alguém deveria escolher você.</p></article>
+          <article class="leak"><span class="leak-number">03</span><h3>O potencial preso na sua hora</h3><p>O negócio cresce, mas continua dependendo demais da sua presença em cada decisão.</p></article>
+          <article class="leak"><span class="leak-number">04</span><h3>O potencial construindo a vida errada</h3><p>Mais faturamento pode estar produzindo menos tempo, escolhas e liberdade.</p></article>
+          <article class="leak"><span class="leak-number">05</span><h3>O potencial que não se acumula</h3><p>Você fatura e entrega, mas ainda não transforma isso em ativos que permanecem.</p></article>
+        </div>
+        <div class="diagnostic-quote reveal"><p>Se o seu negócio crescesse cinco vezes exatamente como está, <em>você desejaria a vida que viria junto?</em></p><small>Uma pergunta do método Self Architecture™</small></div>
+      </div>
+    </section>
+    <!-- LÂMINA 3: entrega e CTA -->
+    <section class="experience" id="experiencia" aria-labelledby="experiencia-heading">
+      <div class="container">
+        <div class="section-index reveal">03 / 03 — Enxergue o próximo movimento</div>
+        <h2 class="reveal" id="experiencia-heading">Você não precisa de mais motivação.<br><em>Precisa de direção.</em></h2>
+        <div class="promise-row reveal">
+          <div class="promise"><div class="count">01 / REVELAÇÃO</div><h3>Enxergar</h3><p>Identifique onde o seu potencial está sendo subutilizado e onde existe um vazamento de valor.</p></div>
+          <div class="promise"><div class="count">02 / VISÃO</div><h3>Visualizar</h3><p>Veja com mais clareza a mulher, o negócio, a posição e a vida que deseja construir.</p></div>
+          <div class="promise"><div class="count">03 / DIREÇÃO</div><h3>Priorizar</h3><p>Reconheça a arquitetura que precisa começar a transformar e sua prioridade para os próximos 90 dias.</p></div>
+        </div>
+        <div class="scan reveal">
+          <div><span class="scan-label">A experiência central</span><h3>Self Architecture Scan™</h3><p>Uma experiência de autodiagnóstico para olhar a mulher e o negócio como um sistema, identificar o principal gargalo e sair com um <strong style="color:white;font-weight:600">Mapa da Próxima Arquitetura™</strong>.</p></div>
+          <div class="scan-categories" aria-label="As nove dimensões do diagnóstico">
+            <div class="cat"><b>Fundamento</b><span>Self · Origin · Vision</span></div>
+            <div class="cat"><b>Valor e posição</b><span>Expression · Audience · Value</span></div>
+            <div class="cat"><b>Negócio e patrimônio</b><span>Revenue · Ecosystem · Equity</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="last-cta">
+        <div class="container"><h3>Existe uma vida à altura do seu potencial. <em>Ela não acontece por acaso.</em></h3><a href="#inscricao">Quero participar <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><p>© <span id="year"></span> (B)eyond Circle · Barbara Bacchi · Self Architecture™</p><p>Masterclass Arquitetura do Sucesso™</p></div></footer>
+  <script>
+    /*
+      As inscrições são enviadas para /api/lead (função serverless da Vercel),
+      que valida os dados e repassa ao webhook definido em WEBHOOK_URL
+      (variável de ambiente na Vercel). A URL do webhook nunca fica exposta no navegador.
+    */
+    const CONFIG = { endpoint: "/api/lead", source: "landing-masterclass-arquitetura-do-sucesso", event: "Masterclass Arquitetura do Sucesso" };
+    const UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid','gclid'];
+    function getTracking(){const q=new URLSearchParams(location.search);const t={};UTM_KEYS.forEach(k=>{const v=q.get(k);if(v)t[k]=v.slice(0,200)});return t}
+    document.documentElement.classList.add('js');
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form=document.getElementById('leadForm');
+    const statusEl=document.getElementById('formStatus');
+    const submitBtn=document.getElementById('submitBtn');
+    const phoneInput=document.getElementById('phone');
+    phoneInput.addEventListener('input', () => {
+      const d=phoneInput.value.replace(/\D/g,'').replace(/^55(?=\d{10,11}$)/,'').slice(0,11);
+      if(!d){phoneInput.value='';return;}
+      let out='('+d.slice(0,2);
+      if(d.length>=3)out+=') '+d.slice(2,d.length<=10?6:7);
+      if(d.length> (d.length<=10?6:7))out+='-'+d.slice(d.length<=10?6:7);
+      phoneInput.value=out;
+    });
+    function showStatus(message,success=false){statusEl.textContent=message;statusEl.classList.add('visible');statusEl.classList.toggle('success',success)}
+    form.addEventListener('submit',async(e)=>{
+      e.preventDefault();
+      statusEl.classList.remove('visible','success');
+      if(form.elements.website.value)return;
+      const name=form.elements.nome.value.trim();
+      const email=form.elements.email.value.trim();
+      const phone=phoneInput.value.replace(/\D/g,'');
+      if(name.length<3){showStatus('Informe seu nome completo.');form.elements.nome.focus();return;}
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showStatus('Informe um e-mail válido.');form.elements.email.focus();return;}
+      if(phone.length!==10&&phone.length!==11){showStatus('Informe um WhatsApp válido com DDD.');phoneInput.focus();return;}
+      if(!form.elements.consentimento.checked){showStatus('Para continuar, autorize o contato sobre a Masterclass.');form.elements.consentimento.focus();return;}
+      submitBtn.disabled=true;
+      submitBtn.querySelector('span').textContent='Enviando inscrição…';
+      const payload={nome:name,email,whatsapp:'+55'+phone,consentimento:true,origem:CONFIG.source,evento:CONFIG.event,registradoEm:new Date().toISOString(),pagina:location.href,referrer:document.referrer||'',tracking:getTracking(),website:form.elements.website.value};
+      try{
+        const response=await fetch(CONFIG.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        if(!response.ok)throw new Error('HTTP '+response.status);
+        showStatus('Solicitação recebida! Seus dados foram enviados. Você receberá as orientações de participação pelo canal informado.',true);
+        if(typeof window.fbq==='function')window.fbq('track','Lead');
+        if(Array.isArray(window.dataLayer))window.dataLayer.push({event:'lead_masterclass',source:CONFIG.source});
+        form.reset();
+      }catch(error){showStatus('Não foi possível enviar seus dados agora. Tente novamente em instantes ou entre em contato com a organização.');console.error('Erro ao enviar inscrição:',error);}
+      finally{submitBtn.disabled=false;submitBtn.querySelector('span').textContent='Quero participar da Masterclass';}
+    });
+    if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      const io=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target)}},{threshold:.09});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    } else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in-view'));
+  </script>
+</body>
+</html>
