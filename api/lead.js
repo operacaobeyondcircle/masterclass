@@ -73,6 +73,8 @@ module.exports = async (req, res) => {
     consentimento: true,
     origem: clean(body.origem, 100),
     evento: clean(body.evento, 120),
+    ingresso: clean(body.ingresso, 40),
+    valor: Number(body.valor) === 147 ? 147 : 97,
     pagina: clean(body.pagina, 500),
     referrer: clean(body.referrer, 500),
     tracking,
