@@ -118,6 +118,28 @@
     @media(max-width:850px){.nav-links{display:none}.container{width:calc(100% - 42px)}.header-inner{height:69px}.hero{padding:116px 0 77px}.hero-grid{grid-template-columns:1fr;gap:38px}.hero-copy{padding-top:0}.hero h1{font-size:clamp(52px,9vw,80px);max-width:680px}.hero-lead{margin-top:22px}.hero-quote{margin-top:23px}.hero-tags{margin-top:23px}.form-shell{max-width:620px;width:100%;padding:30px}.hero-footer{display:none}.diag-intro{gap:25px;grid-template-columns:1fr;margin-bottom:35px}.diag-intro p{margin-left:0}.leaks{grid-template-columns:repeat(2,1fr);border-bottom:0}.leak{padding:20px!important;border-bottom:1px solid #dcdcd9;min-height:225px}.leak:nth-child(even){border-right:0}.leak:last-child{grid-column:span 2}.diagnostic-quote{padding:27px}.experience{padding-top:78px}.scan{grid-template-columns:1fr;padding:30px;gap:25px;margin:56px 0}.last-cta .container{align-items:start;flex-direction:column}.last-cta a{width:100%;justify-content:space-between}}
     @media(max-width:520px){.container{width:calc(100% - 36px)}.wordmark .symbol{font-size:31px}.wordmark .brandline{font-size:21px}.nav-cta{font-size:9px;padding:12px 11px}.hero{padding:103px 0 55px;min-height:unset}.microcopy{font-size:9px;letter-spacing:.18em;margin-bottom:18px}.hero h1{font-size:clamp(49px,12.25vw,66px);line-height:1.01}.hero-lead{font-size:14px;line-height:1.75}.hero-quote{font-size:23px}.hero-tags span{font-size:9px;padding:7px 9px}.form-shell{padding:28px 22px}.form-shell h2{font-size:41px}.diagnosis{padding:74px 0}.diagnosis h2,.experience h2{font-size:clamp(43px,10vw,60px)}.leaks{display:block}.leak{border-right:0;min-height:unset;padding:23px 0 !important;display:grid;grid-template-columns:58px 1fr;gap:9px 16px}.leak h3{font-size:27px;min-height:unset;align-self:center}.leak p{grid-column:2;margin-top:0;max-width:380px}.leak:last-child{grid-column:auto}.diagnostic-quote{display:block;padding:26px 23px}.diagnostic-quote p{font-size:29px}.diagnostic-quote small{display:block;margin-top:19px}.promise-row{display:block}.promise{margin-top:24px}.promise h3{font-size:38px;margin:9px 0}.promise p{font-size:13px}.scan{margin:49px 0;padding:24px 19px}.scan h3{font-size:39px}.scan-categories .cat{display:block}.scan-categories .cat span{display:block;text-align:left;margin-top:5px}.last-cta{padding:37px 0}.last-cta h3{font-size:40px}.last-cta a{padding:19px 17px}footer .container{display:block}footer .container p+p{margin-top:12px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none!important}.js .reveal:not(.in-view){opacity:1;transform:none}.submit,.nav-cta{transition:none}}
+
+    /* Ofertas e checkout */
+    .pricing{background:var(--paper);color:var(--black);padding:92px 0 96px;border-top:1px solid #e4e4e1}
+    .pricing-head{display:flex;align-items:end;justify-content:space-between;gap:36px;margin:25px 0 42px}
+    .pricing-head h2{font-size:clamp(46px,5vw,72px);line-height:1.05;letter-spacing:-.03em;max-width:700px}
+    .pricing-head h2 em{color:var(--red);font-style:italic}
+    .pricing-lead{max-width:390px;color:#5f5f5d;font-size:14px;line-height:1.75}
+    .pricing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .price-card{border:1px solid #d2d2cf;padding:30px 30px 28px;background:#fff;display:flex;flex-direction:column;min-height:330px;position:relative}
+    .price-card.featured{border:2px solid var(--red);padding:29px 29px 27px}
+    .price-card .badge{position:absolute;top:-12px;left:24px;background:var(--red);color:#fff;padding:6px 10px;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .price-card .label{font-size:10px;color:#686866;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+    .price-card h3{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.1;margin:16px 0 9px}
+    .price-card .price{font-family:var(--serif);font-size:62px;line-height:1;color:var(--black);letter-spacing:-.04em}
+    .price-card .price small{font-family:var(--sans);font-size:15px;letter-spacing:0;color:#555;vertical-align:top;margin-right:4px}
+    .price-card p{color:#666;font-size:13px;line-height:1.7;margin:17px 0 24px;max-width:470px}
+    .price-card ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:8px;color:#41413f;font-size:12px;line-height:1.5}
+    .price-card li::before{content:'✓';color:var(--red);font-weight:700;margin-right:8px}
+    .price-card a{margin-top:auto;display:flex;align-items:center;justify-content:space-between;background:var(--red);color:#fff;padding:16px 17px;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:700;transition:background .2s,transform .2s}
+    .price-card a:hover{background:#a90e27;transform:translateY(-1px)}
+    @media(max-width:850px){.pricing{padding:76px 0}.pricing-head{display:block;margin-bottom:32px}.pricing-lead{margin-top:18px}.pricing-grid{grid-template-columns:1fr}}
+    @media(max-width:520px){.pricing{padding:65px 0}.price-card{padding:25px 21px 22px;min-height:0}.price-card.featured{padding:24px 20px 21px}.price-card .price{font-size:56px}}
   </style>
 </head>
 <body>
@@ -166,6 +188,36 @@
       </div>
       <div class="hero-footer" aria-hidden="true"><div class="container"><span>(B)eyond Circle / Self Architecture™</span><span>01 / 03 — Reconhecer</span></div></div>
     </section>
+
+    <!-- OFERTAS / INSCRIÇÃO -->
+    <section class="pricing" id="oferta" aria-labelledby="oferta-heading">
+      <div class="container">
+        <div class="section-index" style="color:#656565">Escolha seu ingresso</div>
+        <div class="pricing-head">
+          <h2 id="oferta-heading">A experiência que combina com o seu <em>próximo capítulo.</em></h2>
+          <p class="pricing-lead">Escolha a modalidade da Masterclass Arquitetura do Sucesso™ e avance diretamente para a página segura de pagamento.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card featured">
+            <span class="badge">Mais escolhido</span>
+            <span class="label">Participação ao vivo</span>
+            <h3>Masterclass ao vivo</h3>
+            <div class="price"><small>R$</small>97</div>
+            <p>Para participar da edição única ao vivo e construir sua próxima arquitetura com Barbara Bacchi.</p>
+            <ul><li>Acesso à Masterclass ao vivo</li><li>Workbook e materiais da aula</li><li>Mapa de Arquitetura 2027™ e plano de ação</li></ul>
+            <a href="https://pay.simplles.com/yqVisC1lOAogNPhc?offerCode=JtRRmdlo" target="_blank" rel="noopener noreferrer">Garantir ingresso <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="price-card">
+            <span class="label">Ao vivo + gravação</span>
+            <h3>Experiência completa</h3>
+            <div class="price"><small>R$</small>147</div>
+            <p>Para viver o encontro ao vivo e rever o conteúdo depois, com mais tempo para aplicar o plano.</p>
+            <ul><li>Inclui todos os itens do ingresso ao vivo</li><li>Gravação disponibilizada em até 7 dias</li><li>Revisão prática do conteúdo</li></ul>
+            <a href="https://pay.simplles.com/yqVisC1lOAogNPhc?offerCode=QrB0zRof" target="_blank" rel="noopener noreferrer">Garantir ingresso <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
     <!-- LÂMINA 2: dores / contraste -->
     <section class="diagnosis" id="diagnostico" aria-labelledby="diagnostico-heading">
       <div class="container">
@@ -204,7 +256,7 @@
         </div>
       </div>
       <div class="last-cta">
-        <div class="container"><h3>Existe uma vida à altura do seu potencial. <em>Ela não acontece por acaso.</em></h3><a href="#inscricao">Quero participar <span aria-hidden="true">↗</span></a></div>
+        <div class="container"><h3>Existe uma vida à altura do seu potencial. <em>Ela não acontece por acaso.</em></h3><a href="#oferta">Escolher meu ingresso <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
   </main>
